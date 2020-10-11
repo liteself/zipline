@@ -428,7 +428,7 @@ def _make_bundle_core():
                     raise ValueError('Need to ingest a bundle that creates '
                                      'writers in order to downgrade the assets'
                                      ' db.')
-            log.info("Ingesting {}.", name)
+            log.info("Ingesting {} with calendar name {} .", name, bundle.calendar_name)
             bundle.ingest(
                 environ,
                 asset_db_writer,

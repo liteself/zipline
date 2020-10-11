@@ -94,7 +94,7 @@ class CSVDIRBundle:
                       self.csvdir)
 
 
-@bundles.register("csvdir")
+@bundles.register("csvdir", calendar_name="24/7", minutes_per_day=1440)
 def csvdir_bundle(environ,
                   asset_db_writer,
                   minute_bar_writer,
@@ -224,4 +224,4 @@ def _pricing_iter(csvdir, symbols, metadata, divs_splits, show_progress):
             yield sid, dfr
 
 
-register_calendar_alias("CSVDIR", "NYSE")
+register_calendar_alias("CSVDIR", "24/7")
